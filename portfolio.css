@@ -1,0 +1,545 @@
+
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #253745;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    scroll-margin-top: 20px;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    background-color: #1e3c52;
+    padding: 12px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #8fc7e8;
+}
+
+
+/* =========================
+   HOME SECTION
+========================= */
+
+.hero {
+    min-height: 500px;
+    padding: 80px 8%;
+    background-color: #e8f0f5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #328cc1;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.3;
+    margin: 12px 0;
+    color: #11212d;
+}
+
+.hero h1 span {
+    color: #328cc1;
+}
+
+.hero h2 {
+    font-size: 22px;
+    color: #253745;
+    margin-bottom: 15px;
+}
+
+.hero-text > p:not(.welcome) {
+    max-width: 520px;
+    color: #52616b;
+    margin-bottom: 22px;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background-color: #253745;
+    color: white;
+    text-decoration: none;
+    padding: 11px 24px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #328cc1;
+    transform: translateY(-2px);
+}
+
+
+/* Profile Card */
+
+.profile-box {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(17, 33, 45, 0.10);
+    min-width: 240px;
+    flex-shrink: 0;
+}
+
+.profile-circle {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background-color: #253745;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.profile-box h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+    color: #11212d;
+}
+
+.profile-box p {
+    color: #328cc1;
+    font-size: 14px;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #11212d;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #52616b;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Balanced spacing between image and text */
+    gap: 70px;
+
+    background-color: #ffffff;
+    text-align: left;
+}
+
+
+/* About Image */
+
+.about-image {
+    width: 300px;
+    height: 350px;
+
+    flex-shrink: 0;
+    overflow: hidden;
+
+    border-radius: 150px 150px 15px 15px;
+    border: 6px solid #e8f0f5;
+
+    box-shadow: 0 8px 25px rgba(37, 55, 69, 0.12);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* About Text */
+
+.about-content {
+    max-width: 500px;
+}
+
+.about-label {
+    color: #328cc1;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    color: #11212d;
+    margin-bottom: 20px;
+}
+
+.about-content h2 span {
+    color: #328cc1;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    color: #52616b;
+}
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills-section {
+    background-color: #e8f0f5;
+}
+
+
+/* =========================
+   SKILLS AND PROJECTS CARDS
+========================= */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 28px 24px;
+
+    border-radius: 10px;
+    border: 1px solid #e2e9ee;
+
+    box-shadow: 0 4px 12px rgba(17, 33, 45, 0.06);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(17, 33, 45, 0.10);
+}
+
+.card h3 {
+    color: #328cc1;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #52616b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.project-card {
+    border-top: 4px solid #328cc1;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    background-color: white;
+}
+
+.contact-section p {
+    color: #52616b;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #11212d;
+    color: white;
+    text-align: center;
+    padding: 20px 8%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .hero {
+        padding: 65px 5%;
+        gap: 30px;
+    }
+
+    .about-section {
+        gap: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .about-image {
+        width: 260px;
+        height: 320px;
+    }
+
+    .about-content {
+        max-width: 450px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 650px) {
+
+    /* Navigation */
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+
+    /* Home */
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-text > p:not(.welcome) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-box {
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+    }
+
+
+    /* General Sections */
+
+    .section {
+        padding: 50px 6%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+
+    /* About */
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-image {
+        width: 240px;
+        height: 290px;
+        flex-shrink: 0;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+
+    /* Skills and Projects */
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* Contact */
+
+    .contact-section p {
+        overflow-wrap: anywhere;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 18px 5%;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+
+}
